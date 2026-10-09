@@ -25,7 +25,16 @@ SECRET_KEY = 'django-insecure-0m%+g$ty5th3!f9x$)v+r9l%h88mow*%iu7m*a9+pimq86zsaw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+"electrician-services-management-system-rcymoaeqa.vercel.app",
+"localhost",
+"127.0.0.1",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+"https://electrician-services-management-system-rcymoaeqa.vercel.app",
+]
+
 
 
 # Application definition
