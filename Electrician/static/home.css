@@ -1,0 +1,105 @@
+body {
+    background-color: rgb(220, 218, 218);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    /* gap: 400px;
+    font-size: 20px;
+    padding: 10px; */
+    justify-content: center;
+    gap: 40px;
+    font-size: 18px;
+    padding: 15px;
+    background-color: #e6f2f2; /* halka cyan background */
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar button {
+    color: white;
+    padding: 5px 10px;
+    background-color: darkcyan;
+}
+
+.home {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.button button {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+h3, h4 {
+    text-align: center;
+}
+
+.booking {
+    text-align: center;
+    padding: 10px;
+    /* font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black; */
+}
+
+.book {
+    display: inline-block;
+    background-color: lightgoldenrodyellow;
+    padding: 10px 10px;    /* bada size */
+    font-size: 24px;       /* bada font */
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.information {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 8px;
+    background-color: darkcyan;
+    color: white;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.page {
+   width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;   /* center + thoda gap */
+    padding: 20px;
+    background-color: white;   /* andar ka background */
+    border: 1px solid #ccc;    /* halka border */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* halka shadow */
+}
+
+.header-banner {
+    text-align: center;
+    padding: 12px;              /* footer se thoda kam */
+    background-color: darkcyan; /* same color as footer */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc; /* halka line niche */
+}

@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Book Service</title>
+
+    <link rel="stylesheet"
+          href="{% static 'services.css' %}">
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <h1>Book a Service</h1>
+
+    <h2>{{ service.name }}</h2>
+
+    <p>
+        Price: ₹{{ service.price }}
+    </p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <label>Customer Name</label>
+        <input type="text" name="customer_name" required>
+
+        <br><br>
+
+        <label>Mobile Number</label>
+        <input type="text" name="mobile" required>
+
+        <br><br>
+
+        <label>Location / Area</label>
+        <input type="text" name="location" required>
+
+        <br><br>
+
+        <label>Address</label>
+        <textarea name="address" required></textarea>
+
+        <br><br>
+
+        <label>Preferred Date</label>
+        <input type="date" name="date" required>
+
+        <br><br>
+
+        <label>Preferred Time</label>
+        <input type="time" name="time" required>
+
+        <br><br>
+
+        <label>Problem Description</label>
+        <textarea name="description"></textarea>
+
+        <br><br>
+
+        <!-- <button type="submit">
+            Confirm Booking
+        </button> -->
+        <!-- <a href="{% url 'book_service' service.id %}"> -->
+            <button type="submit">Book Service</button>
+        <!-- </a> -->
+
+
+    </form>
+
+</div>
+
+</body>
+</html>

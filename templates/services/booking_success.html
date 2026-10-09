@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Successful</title>
+    <link rel="stylesheet" href="{% static 'allpages.css' %}">
+</head>
+
+<body>
+
+    <h1>Booking Successful!</h1>
+
+    <h2>Thank You for Booking Our Service 😊</h2>
+
+    <p>Your service has been booked successfully.</p>
+
+    <br>
+
+    <a href="{% url 'home' %}">
+        <button>Back to Home</button>
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Services</title>
+
+    <link rel="stylesheet" href="{% static 'services.css' %}">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <h1>Our Electrical Services</h1>
+
+        <hr>
+
+        <p class="intro">
+            We provide reliable and affordable electrical services at your doorstep.
+        </p>
+
+
+        <div class="services">
+
+            {% for service in services %}
+
+            <div class="service-card">
+
+                <h2>{{ service.name }}</h2>
+
+                <p>
+                    {{ service.description }}
+                </p>
+
+                <p>
+                    <b>Price: ₹{{ service.price }}</b>
+                </p>
+
+                <a href="{% url 'book_service' service.id %}">
+                    <button type="button">
+                        Book Service
+                    </button>
+                </a>
+
+            </div>
+
+            {% empty %}
+
+            <p>No services available.</p>
+
+            {% endfor %}
+
+        </div>
+
+
+        <br><br>
+
+        <a href="/">
+            <button type="button">
+                Back to Home
+            </button>
+        </a>
+
+        <h2>Narendra Bhavsar</h2>
+
+    </div>
+
+</body>
+
+</html>

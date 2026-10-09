@@ -1,0 +1,135 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Update Booking</title>
+
+    <link rel="stylesheet"
+          href="{% static 'services.css' %}">
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <h1>Update Your Booking</h1>
+
+        <hr>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+
+            <label>Customer Name:</label>
+
+            <input
+                type="text"
+                name="customer_name"
+                value="{{ booking.customer_name }}"
+                required
+            >
+
+            <br><br>
+
+
+            <label>Mobile:</label>
+
+            <input
+                type="text"
+                name="mobile"
+                value="{{ booking.mobile }}"
+                required
+            >
+
+            <br><br>
+
+
+            <label>Service:</label>
+
+            <input
+                type="text"
+                value="{{ booking.service }}"
+                readonly
+            >
+
+            <br><br>
+
+
+            <label>Price:</label>
+
+            <input
+                type="text"
+                value="₹{{ booking.price }}"
+                readonly
+            >
+
+            <br><br>
+
+
+            <label>Location:</label>
+
+            <input
+                type="text"
+                name="location"
+                value="{{ booking.location }}"
+                required
+            >
+
+            <br><br>
+
+
+            <label>Address:</label>
+
+            <textarea
+                name="address"
+                required
+            >{{ booking.address }}</textarea>
+
+            <br><br>
+
+
+            <label>Date:</label>
+
+            <input
+                type="date"
+                name="date"
+                value="{{ booking.date|date:'Y-m-d' }}"
+                required
+            >
+
+            <br><br>
+
+
+            <label>Time:</label>
+
+            <input
+                type="time"
+                name="time"
+                value="{{ booking.time|time:'H:i' }}"
+                required
+            >
+
+            <br><br>
+
+
+            <button type="submit">
+                Update
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

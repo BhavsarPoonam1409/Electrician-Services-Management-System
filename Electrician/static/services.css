@@ -1,0 +1,34 @@
+body{
+    background-color: white;
+}
+
+.page{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.services{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card{
+    width: 220px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.service-card button{
+    background-color: darkcyan;
+    color: white;
+    padding: 8px 20px;
+}

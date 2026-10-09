@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narendra Bhavsar Electrician Services</title>
+
+   
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+
+<body>
+    <div class="header-banner">
+            Narendra Bhavsar Electrician Services
+</div>
+    <div class="page">
+        <!-- <div class="header-banner">
+            Narendra Bhavsar Electrician Services
+</div> -->
+
+        <header>
+            <h1>Bhavsar Electrician Services</h1>
+            <div class="navbar">
+                <a href=""><button>Home</button></a>
+                <a href="{% url 'services' %}"><button>Services</button></a>
+                <a href="{% url 'contact' %}"><button>Contact</button></a>
+                <a href="{% url 'about' %}"><button>About Me</button></a>
+            </div>
+        </header>
+
+        <section class="home">
+            <h3>Reliable Electrician Services At Your Doorstep</h3>
+            <div class="button">
+                <button type="button">Fan</button>
+                <button type="button">Light</button>
+                <button type="button">Wiring</button>
+                <button type="button">Switch</button>
+            </div>
+
+            <div class="booking">
+                <button style="background-color: lightgoldenrodyellow;">
+                    <a href="{% url 'services' %}" class="book">Book a Service</a>
+                </button>
+            </div>
+
+
+            <div class="booking-options">
+
+            <h3>My Bookings</h3>
+            {% for booking in bookings %}
+
+            <div class="booking">
+
+            <p>
+                <b>Service:</b> {{ booking.service }}
+            </p>
+
+            <p>
+                <b>Name:</b> {{ booking.customer_name }}
+            </p>
+
+            <p>
+                <b>Date:</b> {{ booking.date }}
+            </p>
+
+            <p>
+                <b>Time:</b> {{ booking.time }}
+            </p>
+            
+            <!-- update krne ke liye -->
+            <a href="{% url 'update_booking' booking.id %}">
+                <button type="button">Update</button>
+            </a>
+            <!-- delte krne ke liye add button -->
+            <a href="{% url 'cancel_booking' booking.id %}">
+                <button type="button">Cancel Booking</button>
+            </a>
+
+        </div>
+
+        {% empty %}
+
+        <p>No booking found.</p>
+
+        {% endfor %}
+
+</div>
+
+        </section>
+
+        <section class="information">
+            <p>Available Time: 9AM - 7PM</p>
+            <p>Service Area: Ahmedabad</p>
+            <p>Contact: 7000000000</p>
+        </section>
+    </div>
+   
+    <footer>
+        <p>© 2026 Bhavsar Electrician Services</p>
+    </footer>
+</body>
+</html>
